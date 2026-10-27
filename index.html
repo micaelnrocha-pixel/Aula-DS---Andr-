@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Meu Espaço</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body data-page="login">
+    <main class="layout">
+
+        <section class="brand-panel">
+            <div class="logo">✦ meu<span>espaço</span></div>
+
+            <div class="brand-content">
+                <div class="eyebrow">SIMPLES. BONITO. FUNCIONAL.</div>
+                <h1>Seu espaço<br>começa <em>aqui.</em></h1>
+                <p>Entre na sua conta ou crie um cadastro para conhecer sua área pessoal.</p>
+            </div>
+
+            <div class="brand-footer">Seu primeiro projeto web, do seu jeito.</div>
+        </section>
+
+        <section class="form-panel">
+            <div class="form-card">
+                <div class="mobile-logo">✦ meuespaço</div>
+                <div class="form-icon">↗</div>
+
+                <h2>Bem-vindo de volta!</h2>
+                <p class="subtitle">Entre com seus dados para continuar.</p>
+
+                <div id="alert" class="alert" role="status"></div>
+
+                <form id="loginForm">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="seuemail@exemplo.com"
+                        required
+                    >
+
+                    <label for="password">Senha</label>
+                    <div class="password-wrap">
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Digite sua senha"
+                            required
+                        >
+                        <button type="button" class="show-password" data-toggle="password">
+                            Mostrar
+                        </button>
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Entrar na minha conta <span>→</span>
+                    </button>
+                </form>
+
+                <p class="form-bottom">
+                    Ainda não tem uma conta?
+                    <a href="cadastro.html">Criar cadastro</a>
+                </p>
+            </div>
+            <p class="note">Projeto de demonstração • Dados salvos neste navegador</p>
+        </section>
+
+    </main>
+</body>
+</html>

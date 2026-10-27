@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Meu Espaço</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body data-page="cadastro">
+    <main class="layout">
+
+        <section class="brand-panel">
+            <div class="logo">✦ meu<span>espaço</span></div>
+
+            <div class="brand-content">
+                <div class="eyebrow">BEM-VINDO AO COMEÇO</div>
+                <h1>Uma nova<br>conta, <em>mil ideias.</em></h1>
+                <p>Preencha seus dados, crie sua conta e entre no seu espaço.</p>
+            </div>
+
+            <div class="brand-footer">Seu primeiro projeto web, do seu jeito.</div>
+        </section>
+
+        <section class="form-panel">
+            <div class="form-card">
+                <div class="mobile-logo">✦ meuespaço</div>
+                <div class="form-icon">✳</div>
+
+                <h2>Crie sua conta</h2>
+                <p class="subtitle">É rapidinho. Vamos começar?</p>
+
+                <div id="alert" class="alert" role="status"></div>
+
+                <form id="registerForm">
+
+                    <label for="name">Seu nome</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Como podemos te chamar?"
+                        minlength="2"
+                        required
+                    >
+
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="seuemail@exemplo.com"
+                        required
+                    >
+
+                    <label for="password">Senha</label>
+                    <div class="password-wrap">
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Crie uma senha (mín. 6 caracteres)"
+                            minlength="6"
+                            required
+                        >
+                        <button type="button" class="show-password" data-toggle="password">
+                            Mostrar
+                        </button>
+                    </div>
+
+                    <label for="confirmPassword">Confirme sua senha</label>
+                    <div class="password-wrap">
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Digite a senha novamente"
+                            minlength="6"
+                            required
+                        >
+                        <button type="button" class="show-password" data-toggle="confirmPassword">
+                            Mostrar
+                        </button>
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Criar minha conta <span>→</span>
+                    </button>
+                </form>
+
+                <p class="form-bottom">
+                    Já tem cadastro?
+                    <a href="index.html">Fazer login</a>
+                </p>
+            </div>
+            <p class="note">Projeto de demonstração • Dados salvos neste navegador</p>
+        </section>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,477 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --navy: #152135;
+    --mint: #b7f3d7;
+    --green: #15815e;
+    --muted: #7c8796;
+    --border: #e3e8ec;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: var(--navy);
+    background: #f7f9fa;
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: #137e5b;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Layout principal */
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    padding: 18px;
+}
+
+/* Painel esquerdo */
+
+.brand-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    min-height: 600px;
+    background: #173b36;
+    border-radius: 22px;
+    padding: 43px 53px;
+    color: white;
+}
+
+.brand-panel::before {
+    content: "";
+    position: absolute;
+    width: 540px;
+    height: 540px;
+    border: 1px solid #ffffff30;
+    border-radius: 50%;
+    left: 46%;
+    top: 39%;
+    box-shadow:
+        0 0 0 72px #ffffff08,
+        0 0 0 145px #ffffff07,
+        0 0 0 218px #ffffff05;
+}
+
+.brand-panel::after {
+    content: "✳";
+    position: absolute;
+    right: 10%;
+    bottom: 21%;
+    font-size: 150px;
+    color: #b7f3d72c;
+    transform: rotate(-15deg);
+}
+
+.logo {
+    position: relative;
+    z-index: 1;
+    font-family: Outfit, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #a3e7c6;
+}
+
+.brand-content {
+    position: relative;
+    z-index: 1;
+    max-width: 550px;
+}
+
+.eyebrow {
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 11px;
+    color: #b6eccc;
+    margin-bottom: 24px;
+}
+
+h1, h2 {
+    font-family: Outfit, Arial, sans-serif;
+    letter-spacing: -1.7px;
+}
+
+.brand-content h1 {
+    font-size: clamp(55px, 5.4vw, 95px);
+    font-weight: 600;
+    line-height: 1.04;
+    margin: 0 0 27px;
+}
+
+.brand-content h1 em,
+.home-main h1 em {
+    font-style: normal;
+    color: var(--mint);
+}
+
+.brand-content p {
+    font-size: 16px;
+    color: #c7d9d4;
+    line-height: 1.8;
+    max-width: 350px;
+}
+
+.brand-footer {
+    position: relative;
+    z-index: 1;
+    color: #a6bcb5;
+    font-size: 12px;
+}
+
+/* Formulários */
+
+.form-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 35px 30px;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 410px;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+.form-icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    background: #e5f6ee;
+    border-radius: 15px;
+    color: #12835c;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 37px;
+    line-height: 1.15;
+    margin: 0 0 9px;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 30px;
+}
+
+.form-card label {
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    margin: 20px 0 9px;
+}
+
+.form-card input {
+    width: 100%;
+    height: 51px;
+    padding: 0 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: white;
+    color: #1c2c3e;
+    transition: 0.2s;
+}
+
+.form-card input:focus {
+    border-color: #2ca87a;
+    box-shadow: 0 0 0 3px #2ca87a17;
+}
+
+.form-card input::placeholder {
+    color: #a6afba;
+    font-size: 13px;
+}
+
+.password-wrap {
+    position: relative;
+}
+
+.password-wrap input {
+    padding-right: 90px;
+}
+
+.show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #16825d;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 8px;
+}
+
+/* Botões */
+
+.primary-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 28px;
+    background: #177b59;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    min-height: 53px;
+    padding: 0 20px;
+    font-weight: 800;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.primary-btn span {
+    font-size: 22px;
+}
+
+.primary-btn:hover {
+    background: #0e6447;
+    transform: translateY(-1px);
+}
+
+.form-bottom {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 27px;
+}
+
+.note {
+    font-size: 11px;
+    color: #9ca6ad;
+    margin: 40px 0 0;
+    text-align: center;
+}
+
+/* Alertas */
+
+.alert {
+    display: none;
+    border-radius: 9px;
+    padding: 13px 14px;
+    margin: 15px 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.alert.visible {
+    display: block;
+}
+
+.alert.error {
+    background: #ffebeb;
+    color: #a33333;
+}
+
+.alert.success {
+    background: #e4f8ee;
+    color: #126646;
+}
+
+/* Tela de boas-vindas */
+
+.home-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5faf7;
+}
+
+.home-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 27px max(5vw, 25px);
+    border-bottom: 1px solid #deebe4;
+}
+
+.home-header .logo {
+    color: #173b36;
+}
+
+.outline-btn {
+    background: white;
+    border: 1px solid #bed6c8;
+    color: #236f51;
+    border-radius: 9px;
+    padding: 12px 20px;
+    font-weight: 800;
+}
+
+.outline-btn:hover {
+    background: #e4f6ea;
+}
+
+.home-main {
+    flex: 1;
+    width: 100%;
+    max-width: 660px;
+    margin: auto;
+    padding: 60px 24px;
+    text-align: center;
+}
+
+.success-mark {
+    margin: 0 auto 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 23px;
+    background: #d4f8e2;
+    color: #1c8c5f;
+    font-size: 43px;
+    font-weight: 800;
+    width: 90px;
+    height: 90px;
+}
+
+.dark-eyebrow {
+    color: #18895e;
+    margin-bottom: 18px;
+}
+
+.home-main h1 {
+    font-size: clamp(52px, 8vw, 85px);
+    line-height: 1.07;
+    margin: 0 0 22px;
+}
+
+.home-main h1 em {
+    color: #12875f;
+}
+
+.home-main > p {
+    font-size: 17px;
+    color: #657d71;
+    line-height: 1.7;
+}
+
+.welcome-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    background: white;
+    border: 1px solid #deebe4;
+    border-radius: 13px;
+    padding: 20px 23px;
+    margin-top: 38px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1ca66b;
+    box-shadow: 0 0 0 5px #dff7ea;
+    flex-shrink: 0;
+}
+
+.welcome-card strong,
+.welcome-card small {
+    display: block;
+}
+
+.welcome-card small {
+    color: #829087;
+    margin-top: 5px;
+}
+
+.home-logout {
+    max-width: 270px;
+    margin: 25px auto;
+}
+
+.home-footer {
+    text-align: center;
+    color: #8ca295;
+    font-size: 12px;
+    padding: 25px;
+}
+
+/* Adaptação para celular */
+
+@media (max-width: 800px) {
+    .layout {
+        display: block;
+        padding: 0;
+    }
+
+    .brand-panel {
+        display: none;
+    }
+
+    .form-panel {
+        min-height: 100vh;
+        padding: 45px 25px;
+    }
+
+    .mobile-logo {
+        display: block;
+        font-family: Outfit, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 22px;
+        color: #167f59;
+        margin-bottom: 50px;
+    }
+
+    .form-card {
+        max-width: 440px;
+    }
+}
+
+@media (max-width: 440px) {
+    h2 {
+        font-size: 32px;
+    }
+
+    .home-header {
+        padding: 20px;
+    }
+
+    .home-header .logo {
+        font-size: 20px;
+    }
+
+    .outline-btn {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
